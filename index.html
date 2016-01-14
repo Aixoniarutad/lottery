@@ -4,12 +4,15 @@
 	<title>Lottery</title>
 </head>
 <body>
+	<!-- Options -->
 	<select id="game_amount">
+		<option value="1">1 game</option>
 		<option value="100">100 games</option>
 		<option value="500">500 games</option>
 		<option value="1000">1000 games</option>
 		<option value="10000">10000 games</option>
 		<option value="100000">100000 games</option>
+		<option value="1000000">1 million games</option>
 	</select>
 	<select id="game_size">
 		<option value="3">Pick 3</option>
@@ -18,20 +21,10 @@
 	</select>
 	<button id="start">Start</button>
 
-
 	<!-- Results -->
 	<div>
-		<label>My Numbers</label>
-		<div id="playerNumbers"></div>
-	</div>
-	<br>
-	<div>
-		<label>Winning Numbers</label>
-		<div id="winningNumbers"></div>
-	</div>
-	<div>
-		<h4>After <span id="numGames">0</span> games.</h4>
-		<div>0 - <span id="match-0"></span></div>
+		<h4><span id="total_played">0</span> games played</h4>
+		<div>Loss - <span id="match-0"></span></div>
 		<div>1 - <span id="match-1"></span></div>
 		<div>2 - <span id="match-2"></span></div>
 		<div>3 - <span id="match-3"></span></div>
