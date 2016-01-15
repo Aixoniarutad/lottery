@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Lottery</title>
+	<style type="text/css">h4{margin-bottom:0;}</style>
 </head>
 <body>
 	<!-- Options -->
@@ -13,23 +14,32 @@
 		<option value="10000">10000 games</option>
 		<option value="100000">100000 games</option>
 		<option value="1000000">1 million games</option>
+		<option value="10000000">10 million games</option>
 	</select>
 	<select id="game_size">
 		<option value="3">Pick 3</option>
 		<option value="4">Pick 4</option>
 		<option value="5">Pick 5</option>
+		<option value="6">Pick 6</option>
 	</select>
 	<button id="start">Start</button>
 
 	<!-- Results -->
+	<h4>Jackpot:</h4>
+	<div id="jackpot"></div>
+
+	<h4>Winning Games:</h4>
+	<div id="user_wins"></div>
+
+	<br/>
 	<div>
-		<h4><span id="total_played">0</span> games played</h4>
 		<div>Loss - <span id="match-0"></span></div>
 		<div>1 - <span id="match-1"></span></div>
 		<div>2 - <span id="match-2"></span></div>
 		<div>3 - <span id="match-3"></span></div>
 		<div>4 - <span id="match-4"></span></div>
 		<div>5 - <span id="match-5"></span></div>
+		<div>6 - <span id="match-6"></span></div>
 	</div>
 
 	<script src="app.js"></script>
