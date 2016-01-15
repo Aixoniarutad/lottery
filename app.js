@@ -16,17 +16,7 @@
 
 		return populate(gameResult);
 	});
-	var generate = function(count) {
-		var numbers=[];
-		for(var i=0; i < count; i++)
-			numbers[i]=Math.floor((Math.random() * 69) + 1);
-		return numbers;
-	}
-	var populate = function(result){
-		for(i in result)
-			document.getElementById('match-'+i).innerHTML = result[i];
-			console.timeEnd('timelapse');
-	}
+
 	var startGame = function(winning, cb){
 		var player = generate(winning.length);
 		var match = 0;
@@ -43,5 +33,17 @@
 				document.getElementById('user_wins').appendChild(game);
 		}
 		return cb(match);
+	}
+
+	var generate = function(count) {
+		var numbers=[];
+		for(var i=0; i < count; i++)
+			numbers[i]=Math.floor((Math.random() * 69) + 1);
+		return numbers;
+	}
+	var populate = function(result){
+		for(i in result)
+			document.getElementById('match-'+i).innerHTML = result[i];
+			console.timeEnd('timelapse');
 	}
 })();
