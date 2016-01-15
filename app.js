@@ -9,10 +9,11 @@
 			document.getElementById('jackpot').innerHTML=winning;
 			document.getElementById('user_wins').innerHTML="";
 
-		for(var i=0; i < gameAmount; i++)
+		for(var i=0; i < gameAmount; i++){
 			startGame(winning, function(matched){
 				gameResult[matched]++;
 			});
+		}
 
 		return populate(gameResult);
 	});
